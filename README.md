@@ -18,8 +18,8 @@ For Mac OS X 10.6 Snow Leopard.
 
 - In the "Receiver URL" text field, enter the URL to something which receives files. For instance a copy of [`recv.php`](http://github.com/rsms/scrup/blob/master/recv.php) which you have uploaded to your server.  Please note that the recv.php requires php5 to work, since it's using the PHP5-only stream_copy_to_stream() function to grab the image data stream.  If your host does not enable PHP5 by default, add a new .htaccess file in the same location as the recv.php file with this content
   
-    AddType x-mapp-php5 .php
-    AddHandler x-mapp-php5 .php
+        AddType x-mapp-php5 .php
+        AddHandler x-mapp-php5 .php
 
 - Take a screenshot and you should see the Scrup icon turning into a check mark, indicating success. (If you see a red badge something failed. Open Console.app and look what Scrup says.)
 
