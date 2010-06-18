@@ -13,7 +13,8 @@ function pathfromid($id, $suffix='') {
 	return substr($id,0,2).'/'.substr($id,2).$suffix;
 }
 # Build path and url
-$_GET['name'] = md5( date('h-i-s, j-m-y, it is w Day') );
+if (!isset($_GET['name']) || !trim($_GET['name']))
+        $_GET['name'] = md5( date('h-i-s, j-m-y, it is w Day') );
 $id = substr(base_convert(md5($_GET['name'].' '.$_SERVER['REMOTE_ADDR']), 16, 36),0,15);
 $suffix = strrchr($_GET['name'], '.');
 $path = pathfromid($id, $suffix);
